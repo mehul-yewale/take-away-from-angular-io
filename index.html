@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Mehul-Yewale.GitHub.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="theme-color" content="#157878"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Mehul-Yewale.GitHub.io</h1>
+  <h2 class="project-tagline">The Script</h2>
+  <!-- <a href="https://github.com/mehul-yewale" class="btn">View On GitHub</a> -->
+  <a href="https://github.com/mehul-yewale" class="btn">Fork On GitHub</a>
+  <a href="https://github.com/mehul-yewale/zipball/master" class="btn">Download .zip</a>
+  <a href="https://github.com/mehul-yewale/tarball/master" class="btn">Download .tar.gz</a>
+</section>
+
+    <section class="main-content">
+      
+      <h2 id="we-will-have-a-short-look-of-angulario">We will have a short look of angular.io</h2>
+
+<h3 id="why-angularjs-24">Why AngularJS-2/4?</h3>
+<ul>
+  <li>
+    <p><strong>PLATFORM INDEPENDENT</strong> – For web, mobile web, native mobile and native desktop app. Support SPA (Single Page Application), offline apps, animations.</p>
+  </li>
+  <li>
+    <p><strong>SPEED &amp; PERFORMANCE</strong> – Web Workers and server-side rendering, control over scalability, building data models on RxJS, Immutable.js or another push-model.</p>
+  </li>
+  <li>
+    <p><strong>WIDELY DOCUMENTED AND POPULAR</strong> – Build quickly with simple and declarative template approach. Get intelligents code completion, instant errors, and other feedback in almost every editor and IDE. Lots of information on cloud.<br />
+<strong>Angular CLI</strong>  – Command line tools: start building fast, add components/files, perform testing, and deployment activities,</p>
+  </li>
+  <li>
+    <p><strong>TESTING TOOLING</strong> –  Support karma and jasmine unit testing.<br />
+ <a href="https://www.thoughtworks.com/insights/blog/testing-angularjs-apps-protractor">Protractor Automation Tool</a> –
+ end to end test framework, running in a real browser, interacting with it as a user would.
+ It is build on NodeJS, Selenium webDriver, Jasmine, Cucumber and Mocha. (Automation testing can be possible like seleniium)
+ Protractor is a NodeJS program that is written in JavaScript, so it can easily identify web elements in an Angular JS application and much more inbuild function which is not availablle in selenium.</p>
+  </li>
+</ul>
+
+<h3 id="so-what-is-angularjs">So What is AngularJS?</h3>
+<ul>
+  <li>Angular is a framework for building client applications in HTML and either JavaScript or a language like <strong>TypeScript</strong> that compiles to JavaScript.</li>
+  <li>The framework consists of several libraries, some of them are core and some optional.</li>
+  <li>We can write Angular applications by composing HTML templates with Angularized markup, writing component classes to manage those templates, adding application logic in services, and boxing components and services in modules.</li>
+</ul>
+
+<h3 id="before-starting-angularjs-24-pre---requisite">Before starting AngularJS 2/4 (Pre - Requisite)</h3>
+<ul>
+  <li>HTML &amp; CSS</li>
+  <li>Familar with javascirpt – plain javascipt with object based.</li>
+  <li>TypeScript – is typebase javascript, code can be written as similar to java (with classes, interface). But behind the scene it compiles &amp; create javascript code iteself. (Browser knows javascript)</li>
+</ul>
+
+<h3 id="system-configuration">System configuration</h3>
+<p>Install Node.js® and NPM if they are not already on your machine.</p>
+<ol>
+  <li><strong>NODE</strong> –  it is JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model (it makes javascript as serverside language &amp; bring javascript language as out of from browser to communicate with os)<br />
+<strong>node -version –&gt; 6.9.x &amp; above (keep it as latest)</strong></li>
+  <li><strong>NPM</strong>  – node package manager<br />
+<strong>npm -version –&gt; 3.x.x and above (keep it as latest)</strong></li>
+  <li>Some of the global packages installation if it is missing form npm or might me needs to it in updated version.</li>
+</ol>
+
+<h3 id="modules---ngmodule----refers-as-a-typescript-decorator">Modules –&gt;  @NgModule (@ - refers as a typescript decorator)</h3>
+<p>Angular apps are modular and Angular has its own modularity system called NgModules.<br />
+Every Angular app has at least one NgModule class, the root module, conventionally named AppModule.<br />
+And this AppModule can be divided into feature modules to maintain performance (lazy loading).</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">import</span> <span class="p">{</span> <span class="nx">NgModule</span> <span class="p">}</span>      <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+	<span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserModule</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/platform-browser'</span><span class="p">;</span>
+	<span class="p">@</span><span class="nd">NgModule</span><span class="p">({</span>
+	  <span class="na">imports</span><span class="p">:</span>      <span class="p">[</span> <span class="nx">BrowserModule</span> <span class="p">],</span>
+	  <span class="na">providers</span><span class="p">:</span>    <span class="p">[</span> <span class="nx">Logger</span> <span class="p">],</span>
+	  <span class="na">declarations</span><span class="p">:</span> <span class="p">[</span> <span class="nx">AppComponent</span> <span class="p">],</span>
+	  <span class="na">exports</span><span class="p">:</span>      <span class="p">[</span> <span class="nx">AppComponent</span> <span class="p">],</span>
+	  <span class="na">bootstrap</span><span class="p">:</span>    <span class="p">[</span> <span class="nx">AppComponent</span> <span class="p">]</span>
+	<span class="p">})</span>
+	<span class="k">export</span> <span class="kd">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>NgModule</strong> – NgModules help organize an application into cohesive blocks of functionality. It identifies the module’s own components, directives, and pipes, making some of them public so external components can use them.</li>
+  <li>Inbuild modules – FormsModule, HttpModule, and RouterModule</li>
+  <li>main.ts file for launching the app : platformBrowserDynamic().bootstrapModule(AppModule);</li>
+</ul>
+
+<h3 id="component-">Component :</h3>
+<p><strong>A component controls a patch of screen called a view.</strong></p>
+<ul>
+  <li>We define a component’s application logic—what it does to support the view—inside a class. The class interacts with the view through an API of properties and methods.</li>
+  <li>@Component is a typescript decorator function which is created by angular that specifies the Angular metadata for the component. Metadata tells Angular how to process a class. (similar to java annotations).</li>
+  <li>Model-View-Controller (MVC) or Model-View-ViewModel (MVVM). In Angular, the component plays the part of the Controller/ViewModel, and the template represents the view.
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+    <span class="na">selector</span><span class="p">:</span> <span class="s1">'app-heroes'</span><span class="p">,</span>		<span class="c1">// the components CSS element selector</span>
+    <span class="na">templateUrl</span><span class="p">:</span> <span class="s1">'./heroes.component.html'</span><span class="p">,</span> <span class="c1">// the location of the component's template file/ component view.</span>
+    <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="s1">'./heroes.component.css'</span><span class="p">]</span> <span class="c1">// the location of the component's private CSS styles.</span>
+  <span class="p">})</span>
+  <span class="k">export</span> <span class="kd">class</span> <span class="nx">HeroesComponent</span> <span class="p">{</span>	<span class="p">}</span>
+	
+  <span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+    <span class="na">selector</span><span class="p">:</span> <span class="s1">'app-heroes'</span><span class="p">,</span>	<span class="c1">// the components CSS element selector</span>
+    <span class="na">template</span><span class="p">:</span> <span class="s1">'&lt;h1&gt;&lt;/h1&gt;'</span><span class="p">,</span> <span class="c1">// that will be templates to render with component</span>
+    <span class="na">style</span><span class="p">:</span> <span class="s2">`body { color: black; }`</span>  <span class="c1">// this css will render with component</span>
+  <span class="p">})</span>
+  <span class="k">export</span> <span class="kd">class</span> <span class="nx">HeroesComponent</span> <span class="p">{</span> 
+      <span class="kr">private</span> <span class="nx">title</span><span class="p">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="s2">"Welcome"</span><span class="p">;</span> <span class="c1">//variable declaration that will be accessed in html template or template file</span>
+      <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>  
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="data-binding">Data binding</h3>
+<p><strong>Model to View or View to Model data bindings</strong></p>
+<ul>
+  <li>
+    <p>Data binding plays an important role in communication between a template and its component.</p>
+
+    <p>Lets assume <strong>View is left-side</strong> and <strong>Model is right side</strong>. Below arrow indicates data-binding direction.</p>
+    <ol>
+      <li>Interpolation (model to view) – <code class="highlighter-rouge">{</code><code class="highlighter-rouge">{</code><code class="highlighter-rouge">obj.id } }</code>     <strong>&lt;—</strong></li>
+      <li>Property binding  (model to view) – <code class="highlighter-rouge">[value]</code>    <strong>&lt;—</strong></li>
+      <li>Event Binding (view to model) – <code class="highlighter-rouge">(click)</code>     <strong>—&gt;</strong></li>
+      <li>Two way data binding (view to model and model to view) – <code class="highlighter-rouge">[(ng-model)]="value"</code> <strong>&lt;—  —&gt;</strong>
+        <ul>
+          <li><code class="highlighter-rouge">&lt;input [(ngModel)]="hero.name"&gt; // but only with form elements</code>.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Angular processes all data bindings once per JavaScript event cycle, from the root of the application component tree through all child components. (like dirty checking with angular-1)</li>
+  <li>Data binding is also important for communication between parent and child components.</li>
+  <li>Also we can do binding through propery with prefixes bind, on, bindon.
+    <ul>
+      <li><code class="highlighter-rouge">[target]="expression"</code>  is same as <code class="highlighter-rouge">bind-target="expression"</code></li>
+      <li><code class="highlighter-rouge">(target)="expression"</code> is same as <code class="highlighter-rouge">on-target="expression"</code></li>
+      <li><code class="highlighter-rouge">[(target)]="expression"</code> is same as <code class="highlighter-rouge">bindon-target="expression"</code></li>
+    </ul>
+  </li>
+  <li>When setting value to property in a non-string datatype, we must use property binding and not an attribute binding. (maintains datatype)</li>
+  <li>By default interpolation and property binding works with properties of elements, not attributes. (eg : colspan is attribute)</li>
+  <li>Attribute binding : <code class="highlighter-rouge">[attr.colspan]="2"</code></li>
+</ul>
+
+<h3 id="component-interaction">Component Interaction</h3>
+<p><strong>Interaction/Communication between parent and child components.</strong></p>
+<ol>
+  <li>Pass data from parent to child with input property binding –  <code class="highlighter-rouge">@Input('master') masterName: string;</code>  – <code class="highlighter-rouge">&lt;my-div [master]="master"&gt;</code>.</li>
+  <li>Intercept input property changes with ngOnChanges() method  – ngOnChanges will execute if any input property got changed in parent components  – ngOnChanges(changes: SimpleChange).</li>
+  <li>Parent listens for child event – <code class="highlighter-rouge">(onVoted)="onVoted($event)"</code> – <code class="highlighter-rouge">@Output() onVoted = new EventEmitter&lt;boolean&gt;();</code>   –  <code class="highlighter-rouge">this.onVoted.emit(true);  // this will call parent component 'onVoted' method</code></li>
+  <li>
+    <p>Parent interacts with child via local variable  –  But limited to access only in template itself.<br />
+ You can do both by creating a template reference variable for the child element and then reference that variable within the parent template.<br />
+ <strong>Template reference variable</strong> – <code class="highlighter-rouge">#fax</code> is same as <code class="highlighter-rouge">ref-fax</code>.  the scope of this variable wiil be for entire template<br />
+<code class="highlighter-rouge">&lt;button (click)="timer.stop()"&gt;Stop&lt;/button&gt;</code>  // calling child components method<br />
+<code class="highlighter-rouge">&lt;app-countdown-timer #timer&gt;&lt;/app-countdown-timer&gt; </code>  //child components</p>
+  </li>
+  <li>
+    <p>Parent calls an @ViewChild() in component (to solve above problem)  –<br />
+<code class="highlighter-rouge">@ViewChild(CountdownTimerComponent) private timerComponent: CountdownTimerComponent;</code>   – child component needs to inject in parent component.<br />
+<code class="highlighter-rouge">start() { this.timerComponent.start();}</code>  //calling child components method</p>
+  </li>
+  <li>Parent and children communicate via a angulaar service  –
+    <ul>
+      <li>A parent component and its children share a service whose interface enables bi-directional communication within the family. (Recommended one)</li>
+      <li>Create service file &amp; inject in both components</li>
+      <li>Either observable by RxJS or putting simple getters &amp; setters of into service class</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="directives">Directives</h3>
+<p><strong>Directives allow you to attach behavior to elements in the DOM</strong></p>
+<ul>
+  <li>Angular templates are dynamic. When Angular renders them, it transforms the DOM according to the instructions given by directives.</li>
+  <li>A directive is a class with a @Directive decorator.</li>
+  <li>A component is also a directive-with-a-template; a @Component decorator is actually a @Directive decorator extended with template-oriented features.</li>
+  <li>
+    <p>There are three kinds of directives in Angular:</p>
+
+    <ol>
+      <li>Components —- only this directives have template.</li>
+      <li>Structural directives —- change the DOM layout by adding. removing and manupulation DOM elements.(eg: <em>ngFor,</em>ngIf)
+        <ul>
+          <li>Recognize by An asterisk (*) precedes the directive</li>
+          <li>You can apply many attribute directives to one host element. You can only apply one structural directive to a host element.</li>
+        </ul>
+      </li>
+      <li>Attribute directives -— change the appearance or behavior of an element, component, or another directive.( eg: ngStyle, ngClass)</li>
+    </ol>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Directive } from '@angular/core';
+@Directive({
+	selector: '[appHighlight]'   // It's the brackets ([]) that make it an attribute selector
+})
+export class HighlightDirective {
+	constructor() { }
+}
+
+@Directive({ 
+	selector?: string
+	inputs?: string[]
+	outputs?: string[]
+	host?: {[key: string]: string}
+	providers?: Provider[]
+	exportAs?: string
+	queries?: {[key: string]: any}
+})
+
+-- instead of host property above-- 
+@HostListener('mouseenter') onMouseEnter() {
+	this.highlight(this.highlightColor || 'red');
+}
+</code></pre></div></div>
+
+<h3 id="services">Services</h3>
+<ul>
+  <li>Reusable code across all components. Components are big consumers of services. Component classes should be lean.</li>
+  <li>Singleton object shared across the module or components depending upon it’s injection.</li>
+  <li>Registering at a component level means you get a new instance of the service with each new instance of that component.</li>
+</ul>
+
+<p>LoggerService -:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export class LoggerService {
+	log(msg: any)   { console.log(msg); }
+	error(msg: any) { console.error(msg); }
+	warn(msg: any)  { console.warn(msg); }
+}
+</code></pre></div></div>
+<h3 id="dependency-injection">Dependency injection</h3>
+<ul>
+  <li>Dependency injection is a way to supply a new instance of a class with the fully-formed dependencies it requires. Most dependencies are services. Angular uses dependency injection to provide new components with the services they need.</li>
+  <li>Angular can tell which services a component needs by looking at the types of its constructor parameters.<br />
+  <code class="highlighter-rouge">constructor(private logger: LoggerService) { }</code></li>
+  <li>When Angular creates a component, it first asks an injector for the services that the component requires.</li>
+  <li>A provider is something that can create or return a service, typically the service class itself. You can register providers in modules or in components.</li>
+  <li>In general, add providers to the root module so that the same instance of a service is available everywhere.</li>
+  <li>Adding providers at a component level means you get a new instance of the service with each new instance of that component.</li>
+</ul>
+
+<h3 id="change-detection--angular-life-cycle-hooks">Change Detection &amp; Angular life cycle hooks</h3>
+<ul>
+  <li>Angular executes template expressions, all the data-binided propertis after every change detection cycle. Change detection cycles are triggered by many asynchronous activities such as promise resolutions, http results, timer events, keypresses and mouse events.</li>
+</ul>
+
+<h3 id="lifecycle-hooks">Lifecycle hooks</h3>
+<p><strong>A component has a lifecycle managed by Angular.</strong></p>
+<ul>
+  <li>Angular creates it, renders it, creates and renders its children, checks it when its data-bound properties change, and destroys it before removing it from the DOM.</li>
+  <li>A directive has the same set of lifecycle hooks, minus the hooks that are specific to component content and views.<br />
+<strong>LIFECYCLE SEQUENCE :</strong></li>
+  <li>constructor –  all the dependency injections will be placed here so that before creating component instance, instace propertise get initilized</li>
+  <li>ngOnChanges() – Respond when Angular (re)sets data-bound input properties. The method receives a SimpleChanges object of current and previous property values. Called before ngOnInit() and whenever one or more data-bound input properties change.</li>
+  <li>ngOnInit() – it calls only once after data-bound propertise set (after first ngOnChanges call)
+    <ul>
+      <li>To perform complex initializations shortly after construction.</li>
+      <li>To set up the component after Angular sets the input properties.</li>
+    </ul>
+  </li>
+  <li>ngDoCheck() – like angular first $scope.digest(); (custom change detection) – Detect and act upon changes that Angular can’t or won’t detect on its own. Called during every change detection run, immediately after ngOnChanges() and ngOnInit().</li>
+  <li>
+    <p>ngOnDestroy() – Cleanup just before Angular destroys the directive/component. It helps to unsubscribe observables, detach event handlers, stop interval timers, unregister all callbacks to avoid memory leaks. Called just before Angular destroys the directive/component.</p>
+  </li>
+  <li>There are also component specific hooks (rarely used):<br />
+ – ngAfterContentInit, ngAfterContentChecked, ngAfterViewInit, ngAfterViewChecked</li>
+</ul>
+
+<h3 id="follow-me">#Follow Me</h3>
+<hr />
+<p><a href="https://github.com/MehulYewale">Github</a> | <a href="https://twitter.com/mehuly17">Twitter</a> | <a href="https://in.linkedin.com/in/mehul-yewale">LinkedIn</a> | <a href="https://mehul-yewale.github.io/">More Blogs</a></p>
+
+
+      
+<!--
+<p>If you have any comments <a href="https://gist.github.com/MehulYewale/0ab9b1cb0899bcb50f17fa666a2c0f07" target="_blank"> #Comments Here... </a></p>
+
+<h2>
+  <a id="follow-me" class="anchor" href="#follow-me" aria-hidden="true">
+    <span aria-hidden="true" class="octicon octicon-link"></span>
+    </a>Follow Me
+</h2>
+
+  <p><a href="https://github.com/MehulYewale">Github</a></p>
+
+  <p><a href="https://twitter.com/mehuly17">Twitter</a></p>
+  
+  <p><a href="https://in.linkedin.com/in/mehul-yewale">LinkedIn</a></p>
+  
+  <p><a href="https://mehul-yewale.github.io">More Blogs By Me</a></p>
+
+  <p>If you have any comments <a href="https://gist.github.com/MehulYewale/ccb7caeee54e3a19930ee5ae42ec3a75" target="_blank"> #Comments Here... </a></p>
+ -->
+
+<p>If you have any comments <a href="https://gist.github.com/MehulYewale/0ab9b1cb0899bcb50f17fa666a2c0f07" target="_blank"> #Comments Here... </a></p>
+
+<footer class="site-footer">
+  <span class="site-footer-owner"><a href="https://mehul-yewale.github.io">Mehul-Yewale.GitHub.io</a> is maintained by <a href="https://github.com/MehulYewale">Mehul Yewale</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
